@@ -17,15 +17,15 @@ $font-body:'Lato', sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-size: 100vmax;
+  // background-size: 100vmax;
   background-color: white;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
-  
+  background-position: center;
+  background-attachment: fixed;
 }
 
 // Required
@@ -95,6 +95,12 @@ background-color:$dark;
   width:80%
 }
 
+@media only screen and (max-device-width: 1024px) {
+  #home, #about, #work, #education {
+    background-attachment: scroll;
+  }
+}
+
 @media (min-width:576px) {
   #logo{
     width:70%
@@ -103,37 +109,35 @@ background-color:$dark;
 
 @media (min-width:768px) {
   #logo{
-    width:50%
-  }
-  #home{
-    height:100vmax;
+    width:60%
   }
   #about {
-    height:100vmax;
     background-image: url("../images/bg-me-01s.jpg");
   }
   #work {
-    height:100vmax;
     background-image: url("../images/bg-me-02s.jpg");
   }
   #education {
-    height:100vmax;
     background-image: url("../images/bg-me-03s.jpg");
   }
 }
-
-
+@media (min-width:992px) {
+  #logo{
+    width:55%
+  }
+}
+  
 @media (min-width: 1200px) {
 
   #home{
-    height:100vmin;
+    height:100vh;
   }
   #about {
-    height:100vmin;
+    height:100vh;
     background-image: url("../images/bg-me-01.jpg");
   }
   #work {
-    height:100vmin;
+    height:100vh;
     background-image: url("../images/bg-me-02.jpg");
   }
   #education {

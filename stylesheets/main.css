@@ -11332,6 +11332,7 @@ fieldset:disabled .btn {
 
 body {
   font-family: "Lato", sans-serif;
+  color: #25271c;
 }
 
 h1, .h1, .h1, h2, .h2, .h2, h3, .h3, .h3, h4, .h4, .h4, h5, .h5, .h5, h6, .h6, .h6 {
@@ -11344,20 +11345,11 @@ h1, .h1 {
 }
 
 i {
-  color: #968fad;
-  font-size: 1.8rem;
-}
-
-i:active, i:hover {
-  color: #25271c;
-}
-
-#footer i {
   color: white;
   font-size: 1.8rem;
 }
 
-#footer i:active, #footer i:hover {
+i:active, i:hover {
   color: #968fad;
 }
 
@@ -11405,7 +11397,6 @@ i:active, i:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  color: #25271c;
 }
 
 #work {
@@ -11429,7 +11420,6 @@ i:active, i:hover {
   background-position: center;
   background-attachment: fixed;
   background-color: #968fad;
-  color: #25271c;
 }
 
 #education {
@@ -11453,11 +11443,21 @@ i:active, i:hover {
   background-position: center;
   background-attachment: fixed;
   background-color: #f6ecdd;
-  color: #25271c;
 }
 
 #logo {
   width: 80%;
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+#logo:hover {
+  -webkit-transform: rotateY(6.284rad);
+          transform: rotateY(6.284rad);
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -11468,13 +11468,13 @@ i:active, i:hover {
 
 @media (min-width: 576px) {
   #logo {
-    width: 70%;
+    width: 60%;
   }
 }
 
 @media (min-width: 768px) {
   #logo {
-    width: 60%;
+    width: 50%;
   }
   #about {
     background-image: url("../images/bg-me-01s.jpg");
@@ -11489,7 +11489,22 @@ i:active, i:hover {
 
 @media (min-width: 992px) {
   #logo {
-    width: 55%;
+    width: 45%;
+  }
+  #home {
+    height: 100vh;
+  }
+  #about {
+    height: 100vh;
+    background-image: url("../images/bg-me-01.jpg");
+  }
+  #work {
+    height: 100vh;
+    background-image: url("../images/bg-me-02.jpg");
+  }
+  #education {
+    height: 100vh;
+    background-image: url("../images/bg-me-03.jpg");
   }
 }
 
@@ -11510,7 +11525,7 @@ i:active, i:hover {
     background-image: url("../images/bg-me-03.jpg");
   }
   #logo {
-    width: 50%;
+    width: 40%;
   }
 }
 

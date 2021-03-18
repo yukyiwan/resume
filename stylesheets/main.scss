@@ -38,6 +38,7 @@ $font-body:'Lato', sans-serif;
 body {
   // background-image: url("../images/bg.jpeg");
   font-family: $font-body;
+  color: $primary
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -52,14 +53,6 @@ h1{
 }
 
 i {
-  color: $dark;
-  font-size: 1.8rem;
-  &:active, &:hover{
-  color:  $primary
-  }
-}
-
-#footer i {
   color: white;
   font-size: 1.8rem;
   &:active, &:hover{
@@ -75,24 +68,26 @@ background-color:$dark;
 
 #about {
   @include flexC();
-  color: $primary;
   
 }
 
 #work {
   @include flexC();
   background-color: $dark;
-  color: $primary
 }
 
 #education {
   @include flexC();
   background-color: $light;
-  color: $primary
 }
 
 #logo{
-  width:80%
+  width:80%;
+  transform: rotateY(0);
+  transition: transform 2s;
+  &:hover{
+    transform: rotateY(6.284rad);
+  }
 }
 
 @media only screen and (max-device-width: 1024px) {
@@ -103,13 +98,13 @@ background-color:$dark;
 
 @media (min-width:576px) {
   #logo{
-    width:70%
+    width:60%
   }
 }
 
 @media (min-width:768px) {
   #logo{
-    width:60%
+    width:50%
   }
   #about {
     background-image: url("../images/bg-me-01s.jpg");
@@ -121,14 +116,11 @@ background-color:$dark;
     background-image: url("../images/bg-me-03s.jpg");
   }
 }
+
 @media (min-width:992px) {
   #logo{
-    width:55%
+    width:45%
   }
-}
-  
-@media (min-width: 1200px) {
-
   #home{
     height:100vh;
   }
@@ -144,15 +136,33 @@ background-color:$dark;
     height:100vh;
     background-image: url("../images/bg-me-03.jpg");
   }
- 
+}
+  
+@media (min-width: 1200px) {
+  #home{
+    height:100vh;
+  }
+  #about {
+    height:100vh;
+    background-image: url("../images/bg-me-01.jpg");
+  }
+  #work {
+    height:100vh;
+    background-image: url("../images/bg-me-02.jpg");
+  }
+  #education {
+    height:100vh;
+    background-image: url("../images/bg-me-03.jpg");
+  }
 
   #logo{
-    width:50%
+    width:40%
+    &:hover{
+      transform: rotateY(3.142rad);
+    }
   }
   
 }
-
-
 
 a{
   color:inherit;
